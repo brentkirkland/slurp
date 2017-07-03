@@ -5,8 +5,7 @@ class Header extends Component {
   render() {
     return (
       <div className="App-header">
-        <h2>S L U R P</h2>
-        <h4>Grow Analytics</h4>
+        <h3>Soilwatch</h3>
       </div>
     );
   }
