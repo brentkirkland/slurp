@@ -43,7 +43,7 @@ class Device extends Component {
         <div className='Device'>
           <div className='Device-row' onTouchMove={this.handleMove.bind(this)} onMouseDown={this.handleClick.bind(this)}>
             <p className='Device-name'>{this.props.name}</p>
-            <p className='Device-moisture'>{this.props.moisture}</p>
+            <p className='Device-moisture'>{this.props.moisture + '%'}</p>
             <p className='Device-lastWater'>{this.props.lastWater}</p>
           </div>
           <div className='Device-stats'>
@@ -82,7 +82,7 @@ class Device extends Component {
               <p>Min Moisture:</p>
               <p>{this.props.min}</p>
             </div>
-            <div className='Device-mini'>
+            <div className='Device-mini-bottom'>
               <p>Max Moisture:</p>
               <p>{this.props.max}</p>
             </div>
@@ -94,7 +94,7 @@ class Device extends Component {
         <div className='Device'>
           <div className='Device-row' onTouchMove={this.handleMove.bind(this)} onMouseDown={this.handleClick.bind(this)}>
             <p className='Device-name'>{this.props.name}</p>
-            <p className='Device-moisture'>{this.props.moisture}</p>
+            <p className='Device-moisture'>{this.props.moisture + '%'}</p>
             <p className='Device-lastWater'>{this.props.lastWater}</p>
           </div>
         </div>

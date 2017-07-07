@@ -54,7 +54,7 @@ class Room extends Component {
         <div>
           <div className='Device-guide'>
             <p className='Device-name'>Name</p>
-            <p className='Device-moisture'>Moisture %</p>
+            <p className='Device-moisture'>Moisture</p>
             <p className='Device-lastWater'>Watered</p>
           </div>
         </div>

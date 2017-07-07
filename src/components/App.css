@@ -4,14 +4,22 @@
 
 .App-header {
   background-color: #222;
-  padding: 15px;
+  padding: 20px;
   padding-left: 10px;
   padding-right: 10px;
   color: white;
 }
 
-h2, h3, h4, p {
+h1, h2, h3, h4, p {
   margin: 0;
+}
+
+h1 {
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1.0em;
 }
 
 input {
@@ -32,7 +40,6 @@ input {
 
 .Device-stats {
   background-color: #f2f2f2;
-  padding: 20px;
   padding-left: 10px;
   padding-right: 10px;
   border-bottom-color: #DDD;
@@ -51,6 +58,14 @@ input {
   border-bottom-style: dotted;
   border-bottom-width: 1px;
   border-bottom-color: #ccc;
+}
+
+.Device-mini-bottom {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .Device-guide {
@@ -82,7 +97,7 @@ input {
 }
 
 .Room-header {
-  padding: 15px;
+  padding: 20px;
   padding-left: 10px;
   padding-right: 10px;
   display: flex;
