@@ -2,10 +2,6 @@
 # yarn lockfile v1
 
 
-"@jshimko/react-time-ago@^4.1.3":
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/@jshimko/react-time-ago/-/react-time-ago-4.1.3.tgz#501ca9fbd2d291e29e9196091612b805ef6088ae"
-
 "@timer/detect-port@1.1.3":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@timer/detect-port/-/detect-port-1.1.3.tgz#1383abd67f9a5d683df5276f8a92d60bdf9abb90"
@@ -910,7 +906,7 @@ babel-register@^6.24.1:
     mkdirp "^0.5.1"
     source-map-support "^0.4.2"
 
-babel-runtime@6.23.0, babel-runtime@^6.18.0, babel-runtime@^6.22.0:
+babel-runtime@6.23.0, babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.6.1:
   version "6.23.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.23.0.tgz#0a9489f144de70efb3ce4300accdb329e2fc543b"
   dependencies:
@@ -2963,6 +2959,16 @@ interpret@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.3.tgz#cbc35c62eeee73f19ab7b10a801511401afc0f90"
 
+intl-messageformat-parser@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-1.2.0.tgz#5906b7f953ab7470e0dc8549097b648b991892ff"
+
+intl-messageformat@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-1.3.0.tgz#f7d926aded7a3ab19b2dc601efd54e99a4bd4eae"
+  dependencies:
+    intl-messageformat-parser "1.2.0"
+
 invariant@^2.0.0, invariant@^2.2.0, invariant@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
@@ -3271,6 +3277,12 @@ istanbul-reports@^1.1.1:
   resolved "https://registry.yarnpkg.com/istanbul-reports/-/istanbul-reports-1.1.1.tgz#042be5c89e175bc3f86523caab29c014e77fee4e"
   dependencies:
     handlebars "^4.0.3"
+
+javascript-time-ago@^0.4.9:
+  version "0.4.9"
+  resolved "https://registry.yarnpkg.com/javascript-time-ago/-/javascript-time-ago-0.4.9.tgz#0eb26538458210b529b259445b0e9c04894c39ed"
+  dependencies:
+    babel-runtime "^6.6.1"
 
 jest-changed-files@^20.0.3:
   version "20.0.3"
