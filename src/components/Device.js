@@ -42,26 +42,13 @@ class Device extends Component {
   }
 
   handleLastWater () {
+    console.log(this.props)
     if (this.props.lastWater === '--') {
-      return (
-        <div className='Device'>
-          <div className='Device-row' onTouchMove={this.handleMove.bind(this)} onMouseDown={this.handleClick.bind(this)}>
-            <p className='Device-name'>{this.props.name}</p>
-            <p className='Device-moisture'>{this.props.moisture + '%'}</p>
-            <p className='Device-lastWater'>--</p>
-          </div>
-        </div>
-      )
+      return <p className='Device-lastWater'>--</p>
+    } else if (this.props.lastWater > new Date().getTime()) {
+      return <p className='Device-lastWater'>Live</p>
     } else {
-      return (
-        <div className='Device'>
-          <div className='Device-row' onTouchMove={this.handleMove.bind(this)} onMouseDown={this.handleClick.bind(this)}>
-            <p className='Device-name'>{this.props.name}</p>
-            <p className='Device-moisture'>{this.props.moisture + '%'}</p>
-            <p className='Device-lastWater'>{timeAgo.format(new Date(this.props.lastWater), twitter)}</p>
-          </div>
-        </div>
-      )
+      return <p className='Device-lastWater'>{timeAgo.format(new Date(this.props.lastWater), twitter) + ' ago'}</p>
     }
   }
 
@@ -72,7 +59,7 @@ class Device extends Component {
           <div className='Device-row' onTouchMove={this.handleMove.bind(this)} onMouseDown={this.handleClick.bind(this)}>
             <p className='Device-name'>{this.props.name}</p>
             <p className='Device-moisture'>{this.props.moisture + '%'}</p>
-            <p className='Device-lastWater'>{this.props.lastWater}</p>
+            {this.handleLastWater()}
           </div>
           <div className='Device-stats'>
             <div className='Device-mini'>
@@ -118,7 +105,15 @@ class Device extends Component {
         </div>
       )
     } else {
-      return this.handleLastWater()
+      return (
+        <div className='Device'>
+          <div className='Device-row' onTouchMove={this.handleMove.bind(this)} onMouseDown={this.handleClick.bind(this)}>
+            <p className='Device-name'>{this.props.name}</p>
+            <p className='Device-moisture'>{this.props.moisture + '%'}</p>
+            {this.handleLastWater()}
+          </div>
+        </div>
+      )
     }
   }
 }

@@ -21,6 +21,7 @@ class Room extends Component {
   }
 
   renderRow(device, index) {
+    console.log(device)
     return <Device
       name={device.device_nickname}
       major={device.major}
