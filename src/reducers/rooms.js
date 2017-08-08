@@ -4,9 +4,10 @@ const rooms = (state = initial_state, action) => {
   var new_state = state;
   switch (action.type) {
     case 'ADD_ROOM':
+      console.log(action)
       var room = {
         id: action.id,
-        nickname: action.nickname,
+        nickname: action.id,
         temp: action.temp,
         time: action.time
       }

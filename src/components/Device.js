@@ -42,13 +42,13 @@ class Device extends Component {
   }
 
   handleLastWater () {
-    console.log(this.props)
+    console.log(this.props, 'propppppy')
     if (this.props.lastWater === '--') {
       return <p className='Device-lastWater'>--</p>
     } else if (this.props.lastWater > new Date().getTime()) {
       return <p className='Device-lastWater'>Live</p>
     } else {
-      return <p className='Device-lastWater'>{timeAgo.format(new Date(this.props.lastWater), twitter) + ' ago'}</p>
+      return <p className='Device-lastWater'>{timeAgo.format(new Date(Math.round(this.props.timestamp*1000)), twitter)}</p>
     }
   }
 
@@ -84,7 +84,7 @@ class Device extends Component {
             </div>
             <div className='Device-mini'>
               <p>Last Updated:</p>
-              <p>{timeAgo.format(new Date(this.props.timestamp), twitter)}</p>
+              <p>{timeAgo.format(new Date(Math.round(this.props.timestamp)), twitter)}</p>
             </div>
             <div className='Device-mini'>
               <p>Stage: </p>
@@ -107,9 +107,11 @@ class Device extends Component {
     } else {
       return (
         <div className='Device'>
-          <div className='Device-row' onTouchMove={this.handleMove.bind(this)} onMouseDown={this.handleClick.bind(this)}>
-            <p className='Device-name'>{this.props.name}</p>
+          <div className='Device-row'>
             <p className='Device-moisture'>{this.props.moisture + '%'}</p>
+            <p className='Device-moisture'>{(this.props.conductivity*0.64).toFixed(2) + ' ppm'}</p>
+            <p className='Device-moisture'>{this.props.light.toFixed(2) + ' lx'}</p>
+            <p className='Device-moisture'>{(this.props.temp*9/5 + 32).toFixed(2) + ' °'}</p>
             {this.handleLastWater()}
           </div>
         </div>

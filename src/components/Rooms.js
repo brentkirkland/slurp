@@ -37,7 +37,7 @@ class Rooms extends Component {
         <div className="Rooms">
           {this.renderRooms()}
           <div className="Rooms-updated">
-            <p>New readings @ 9am, 1pm, 5pm, 9pm.</p>
+            <p>New readings every hour.</p>
           </div>
         </div>
       )
